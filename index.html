@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seating Chart Generator</title>
-  <link rel = "stylesheet" href="styles1.css"/>
-
+  <link rel = "stylesheet" href="style.css"/>
 </head>
 <body>
   <h1 style="color : red;">FHS Seating Chart Maker</h1>
   <div id="controls">
     <label>Rows: <input type="number" id="rows" min="1" max="20" value="5"></label>
     <label>Columns: <input type="number" id="cols" min="1" max="20" value="5"></label>
-    <button onclick="generateGrid()">Generate Grid</button>
-    <button onclick="randomizeNames()">Randomize Names</button>
+    <button onclick="generateGrid()">Generate</button>
     <br>
-    <textarea id="name-list" placeholder="Enter names, one per line"></textarea>
-  </div>
-  <div id="grid">
-    <script src="grid.js"></script>
+    <button id = "edit" onclick= "editModeToggle()">Reshape Mode</button>
+    <button id = "random" onclick="randomizeNames()">Randomize Names</button>
+    <div id="grid">
+      <script src="grid.js"></script>
+    </div>
   </div>
 </body>
 </html>
